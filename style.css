@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f8;
+}
+
+/* Barra lateral */
+.barra {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  padding: 20px;
+  background-color: #292642;
+  transition: transform 0.3s ease;
+}
+
+.barra h2 {
+  color: white;
+}
+
+/* Enlaces del menú */
+.barra a {
+  display: block;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Cambia el color al poner el cursor sobre un enlace */
+.barra a:hover {
+  background-color: #514a78;
+}
+
+/* Contenido de la página */
+main {
+  margin-left: 260px;
+  padding: 30px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Botón para abrir y cerrar el menú */
+.boton-menu {
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #292642;
+  color: white;
+  cursor: pointer;
+}
+
+.boton-menu:hover {
+  background-color: #514a78;
+}
+
+/* Cuando el menú está cerrado, se desliza hacia la izquierda */
+body.menu-cerrado .barra {
+  transform: translateX(-100%);
+}
+
+/* Cuando el menú está cerrado, el contenido ocupa su lugar */
+body.menu-cerrado main {
+  margin-left: 0;
+}
+
+/* Espacio entre las secciones */
+section {
+  min-height: 300px;
+  padding-top: 10px;
+}
